@@ -1,8 +1,8 @@
 import { Client, GatewayIntentBits } from 'discord.js';
 
 // Lê as variáveis de ambiente corretamente
-const token = process.env.DISCORD_TOKEN || "MTQzNzQxNTA5ODA3ODQ2MTk2Mg.GUaMWy.QOSLiXuyPW6DmODpgIuxenF7WY4I2AoVSYCuB4";
-const canalId = process.env.CHANNEL_ID || "1437418098583011481";
+const token = process.env.DISCORD_TOKEN;
+const channelId = process.env.CHANNEL_ID;
 
 if (!token) {
   console.error("❌ Nenhum DISCORD_TOKEN encontrado nas variáveis de ambiente!");
@@ -35,4 +35,3 @@ client.on('messageCreate', (message) => {
 client.login(token).catch(err => {
   console.error("⚠️ Erro ao fazer login no Discord:", err.message);
 });
-
